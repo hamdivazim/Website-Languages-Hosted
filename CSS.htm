@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html id="screen">
+	<head>
+		<title>
+			CSS
+		</title>
+			<ul>
+				<button class="tab" onclick="window.history.back()">◄</button><button class="tab" onclick="window.history.forward()">►</button>
+				<li>
+					<a href="HTML.htm">
+						<button class="nav" id="HTML">
+							HTML
+							<br>
+							<img class="btns" src="https://th.bing.com/th/id/OIP.sxgAuWLSIvPXh0cZ2bmQvgHaIj?w=165&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7.jpg">
+						</button
+					</a>
+				</li>
+				<li>
+					<a href="CSS.htm">
+						<button class="nav" id="CSS">
+							CSS
+							<br>
+							<img class="btns" src="https://www.bing.com/th?id=OIP.xhnzhHcorvOTDzjLVg0LAwHaI4&w=228&h=273&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2.jpg">
+						</button>
+					</a>
+				</li>
+				<li>
+					<a href="JS.htm">
+						<button class="nav" id="JS">
+							JS
+							<br>
+							<img class="btns" src="https://th.bing.com/th/id/OIP.ywKlDr8kIyL3IERdO2u4VAHaHa?w=153&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7.jpg">
+						</button>
+					</a>
+					<button id="fullscreen" onclick="fullscreen()">
+						<img class="button" src="https://th.bing.com/th/id/OIP.iWfK3KHW_PM6jXalvJOyygHaHa?w=157&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" width="400px">
+					</button>
+				</li>
+			</ul>
+	</head>
+	<body id="body">
+		<h1>
+			CSS
+		</h1>
+		<div id="main">
+			<h4>
+				<u>
+					The Style
+				</u>
+			</h4>
+			<p id="text">
+				Cascading Style Sheet (CSS), is the <span id="IMPORTANT">style sheet language</span> that works alongside <span id="IMPORTANT">Hyper Text Markup Language (HTML)</span> and <span id="IMPORTANT">JavaScript (JS)</span>.<br>
+				It is the <span id="IMPORTANT">outer layer</span> of a website, and is what gives the <span id="IMPORTANT">visual look</span>, e.g. text colours, animations and background colours.
+			</p>
+		</div>
+		<br>
+		<marquee id="copyright" onmouseover="stop()" onmouseout="start()" behavior="alternate" scrollamount="5" width="200px">&copy 2022 Rupert Turnbull</marquee>
+	</body>
+</html>
+<style>
+#IMPORTANT {
+color: red;
+font-size: 18px;
+}
+#text {
+color: black;
+font-size: 16px;
+}
+marquee {
+color: white;
+font-size: 13px;
+font-family: impact;
+}
+marquee:hover {
+transition: 0.2s;
+font-size: 17px;
+border: solid 2px red;
+background-color: red;
+border-radius: 20px;
+}
+#main {
+background-color: white;
+font-family: fantasy;
+display: inline-block;
+border-radius: 16px;
+border: 3px solid white;
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 60px;
+height: 210px;
+border: 3px solid white;
+background-color: white;
+border-radius: 16px;
+}
+li a {
+display: block;
+}
+body {
+text-align: center;
+background-color: black;
+}
+.nav {
+border-radius: 16px;
+font-family: fantasy;
+}
+.nav:hover {
+transition: 0.5s;
+box-shadow: 0 4px 8px 0 rgba(0,0,1,2);
+width: 50px;
+height: 50px;
+font-size: 18px;
+}
+#CSS {
+border: 2px solid red;
+}
+h1 {
+color: white;
+font-family: fantasy;
+}
+#fullscreen {
+border-radius: 5px;
+}
+#fullscreen:hover {
+transition: 0.5s;
+box-shadow: 0 4px 8px 0 rgba(0,0,1,2);
+width: 50px;
+height: 50px;
+font-size: 18px;
+}
+.btns {
+width: 20px;
+height: 20px;
+}
+.button {
+width: 30px;
+height: 30px;
+border-radius: 16px
+}
+h4:hover {
+transition: 2s;
+font-size: 20px;
+}
+.tab {
+border-radius: 50%;
+}
+.tab:hover {
+border: 2px solid red;
+}
+</style>
+<script>
+var screen = document.getElementById("screen");
+function stop() {
+document.getElementById("copyright").scrollamount="0";
+}
+function start() {
+document.getElementById("copyright").scrollamount="5";
+}
+function fullscreen() {
+  if (screen.requestFullscreen) {
+    screen.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    screen.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    screen.msRequestFullscreen();
+  }
+}
+</script>
